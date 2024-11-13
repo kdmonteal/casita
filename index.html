@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Model Viewer con AR</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer@1.12.0/dist/model-viewer.min.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <style>
         /* Estilos para el diseño de pantalla completa */
@@ -56,8 +57,8 @@
 
     <!-- Model Viewer con AR -->
     <div class="model-viewer-container">
-        <model-viewer src="./model.glb" alt="Modelo 3D en AR"ar ar-modes="scene-viewer quick-look" camera-controls touch-action="pan-y" 
-        environment-image="neutral" shadow-intensity="1" >
+        <model-viewer src="./model.glb" alt="Modelo 3D en AR" ar ar-modes="scene-viewer quick-look" camera-controls touch-action="pan-y" environment-image="neutral" shadow-intensity="1">
+        </model-viewer>
     </div>
 </body>
 </html>
