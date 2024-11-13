@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Viewer con AR</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        /* Estilos para el diseño de pantalla completa */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            z-index: 10; /* Asegura que el logo esté visible en la parte superior */
+            background-color: white; /* Fondo blanco para destacar el logo */
+        }
+
+        .model-viewer-container {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        model-viewer {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            top: -10px; /* Ajusta la posición para que el modelo esté centrado en la pantalla */
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo del jardín -->
+    <div class="logo">
+        <img src="logo.png" alt="Logo del Jardín" width="200">
+    </div>
+
+    <!-- Model Viewer con AR -->
+    <div class="model-viewer-container">
+        <model-viewer src="./model.glb" alt="Modelo 3D en AR" ar ar-modes="webxr scene-viewer quick-look" 
+                      camera-controls environment-image="neutral" shadow-intensity="1" >
+        </model-viewer>
+    </div>
+</body>
+</html>
